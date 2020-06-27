@@ -17,6 +17,7 @@ const campgroundRoutes = require('./routes/campgrounds'),
 const app = express();
 // seedDB();
 // mongoose.connect('mongodb://localhost/yelp_camp');
+
 mongoose.connect('mongodb+srv://breellz:tallboy1996@cluster-yelp-tbfgx.mongodb.net/Cluster-yelp?retryWrites=true&w=majority');
 
 //======================================================
