@@ -19,7 +19,6 @@ const app = express();
 // seedDB();
  mongoose.connect(process.env.DATABASEURL);
 
-//mongoose.connect('mongodb+srv://breellz:tallboy1996@cluster-yelp-tbfgx.mongodb.net/Cluster-yelp?retryWrites=true&w=majority');
 
 //======================================================
 //passport configuration

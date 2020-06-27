@@ -1,9 +1,18 @@
 <% include ./partials/header %>
-<h1>Register</h1>
-
+<div class="container">
+<div class="col">
+<h1 class="text-center">Register</h1>
+<div style="width: 40%; margin: 25px auto">
 <form action="/register" method="post">
-  <input type="text" name="username" placeholder="username"/ >
- <input type="password" name="password" placeholder="password">
-  <button>submit</button>
+<div class="form-group">
+  <input class="form-control" type="text" name="username" placeholder="username"/ >
+</div>
+<div class="form-group">
+ <input class="form-control" type="password" name="password" placeholder="password">
+  </div>
+  <button class="btn btn-block btn-lg btn-primary">submit</button>
 </form>
+</div>
+</div>
+</div>
 <% include ./partials/footer %>
