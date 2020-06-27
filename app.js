@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+require('dotenv').config()
 const mongoose = require('mongoose');
 const passport = require('passport')
 const localStrategy = require('passport-local')
@@ -16,9 +17,9 @@ const campgroundRoutes = require('./routes/campgrounds'),
 
 const app = express();
 // seedDB();
-// mongoose.connect('mongodb://localhost/yelp_camp');
+ mongoose.connect(process.env.DATABASEURL);
 
-mongoose.connect('mongodb+srv://breellz:tallboy1996@cluster-yelp-tbfgx.mongodb.net/Cluster-yelp?retryWrites=true&w=majority');
+//mongoose.connect('mongodb+srv://breellz:tallboy1996@cluster-yelp-tbfgx.mongodb.net/Cluster-yelp?retryWrites=true&w=majority');
 
 //======================================================
 //passport configuration
