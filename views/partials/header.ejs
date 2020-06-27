@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheet/main.css">
+  <title>Yelp Camp</title>
+</head>
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class=" w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/campgrounds">Yelp Camp</a>
+            </li>
+        </ul>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+        <% if(!currentUser){ %>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/register">Sign Up</a>
+            </li>
+        <% } else { %>
+            <li class="nav-item">
+               <p class="nav-link">Signed In as <%= currentUser.username %></p> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Log Out</a>
+            </li>
+        <%}%>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+<% if (error && error.length > 0){%>
+    <div class="alert alert-danger">
+    <%= error %>
+    </div>
+    <%}%>
+<% if (success && success.length > 0){%>
+    <div class="alert alert-success">
+    <%= success %>
+    </div>
+    <%}%>
+</div>
+
+<br>
+<body>
